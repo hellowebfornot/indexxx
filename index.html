@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DASHRACK</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">DASHRACK</div>
+        </nav>
+    </header>
+    
+    <section class="main-section">
+        <h1 class="tagline">Were you let in for your looks? No. Will you be judged on them? Yes.</h1>
+        <h1 class="tagline">Who's got the best looks? Click to choose.</h1>
+        
+        <div class="image-container" id="imageContainer">
+            <!-- Add your image URLs here -->
+
+            <img src="https://i.imgur.com/AFUygeW.png" alt="Image 1" class="gallery-image">
+            <img src="https://i.imgur.com/hxRiCu0.png" alt="Image 2" class="gallery-image">
+            <img src="https://i.imgur.com/aDEbTao.png" alt="Image 2" class="gallery-image">
+            <img src="https://i.imgur.com/DeiAXRI.png" alt="Image 2" class="gallery-image">
+            <img src="https://i.imgur.com/gZ3jkIW.png" alt="Image 2" class="gallery-image">
+            <img src="https://i.imgur.com/lXPT0W2.png" alt="Image 2" class="gallery-image">
+
+
+            <!-- Add more images as needed -->
+        </div>
+        
+        <footer class="footer">
+            <p>DASHRACK, 2024. A VBUCK SELLER PRODUCTION</p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: #800080; /* Purple */
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.gallery-image:hover {
+  filter: brightness(70%);
+}
+
+.footer {
+  background-color: #800080;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.gallery-image');
+
+  images.forEach(image => {
+      image.addEventListener('click', function () {
+          // You can implement voting logic here
+          alert('Vote submitted!'); // Placeholder, replace with actual logic
+      });
+  });
+});
+</script>
